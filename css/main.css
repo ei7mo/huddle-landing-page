@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(../images/bg-desktop.svg);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+@media (max-width: 377px) {
+  body {
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+.container {
+  margin: 30px;
+}
+
+.header img {
+  width: 200px;
+}
+
+@media (max-width: 970px) {
+  .header img {
+    width: 150px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+@media (max-width: 970px) {
+  .content {
+    flex-direction: column;
+    margin: 30px 0 80px;
+  }
+}
+
+.content img {
+  width: 740px;
+}
+
+@media (max-width: 970px) {
+  .content img {
+    width: 300px;
+    margin-bottom: 40px;
+  }
+}
+
+.content .text {
+  width: 750px;
+  height: 400px;
+}
+
+@media (max-width: 970px) {
+  .content .text {
+    text-align: center;
+    width: 300px;
+    height: auto;
+  }
+}
+
+.content .text h1 {
+  width: 500px;
+  font-size: 40px;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+@media (max-width: 970px) {
+  .content .text h1 {
+    width: auto;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+}
+
+.content .text p {
+  width: 500px;
+  margin-bottom: 40px;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (max-width: 970px) {
+  .content .text p {
+    width: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.content .text button {
+  color: hsl(257, 40%, 49%);
+  border: none;
+  width: 200px;
+  padding: 20px 0;
+  border-radius: 30px;
+  box-shadow: 0 5px 10px 0px hsl(257, 40%, 31%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (max-width: 970px) {
+  .content .text button {
+    padding: 13px 0;
+  }
+}
+
+.content .text button:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+}
+
+@media (max-width: 970px) {
+  .footer {
+    justify-content: center;
+  }
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px 7px;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: hsl(300, 69%, 71%);
+  border-color: hsl(300, 69%, 71%);
+}
