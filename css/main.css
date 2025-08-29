@@ -6,26 +6,54 @@
 body {
   background-color: hsl(257, 40%, 49%);
   background-image: url(../images/bg-desktop.svg);
+  background-repeat: no-repeat;
   font-family: "Poppins", sans-serif;
   color: white;
 }
 
-@media (max-width: 377px) {
+@media (max-width: 375px) {
   body {
     background-image: url(../images/bg-mobile.svg);
     background-repeat: no-repeat;
   }
 }
 
+@media (min-width: 768px) {
+  body {
+    background-size: cover;
+  }
+}
+
 .container {
-  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: calc(1440px - 200px);
+  height: 100%;
+  margin: 30px auto;
+}
+
+@media (max-width: 375px) {
+  .container {
+    max-width: calc(375px - 50px);
+    margin: 25px;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: calc(768px - 100px);
+    margin: 50px;
+  }
 }
 
 .header img {
   width: 200px;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 768px) {
   .header img {
     width: 150px;
   }
@@ -33,69 +61,43 @@ body {
 
 .content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 30px 0;
+  gap: 70px;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 768px) {
   .content {
     flex-direction: column;
-    margin: 30px 0 80px;
+    text-align: center;
   }
 }
 
-.content img {
-  width: 740px;
-}
-
-@media (max-width: 970px) {
+@media (max-width: 1440px) {
   .content img {
-    width: 300px;
-    margin-bottom: 40px;
+    width: 100%;
   }
 }
 
 .content .text {
-  width: 750px;
-  height: 400px;
-}
-
-@media (max-width: 970px) {
-  .content .text {
-    text-align: center;
-    width: 300px;
-    height: auto;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 .content .text h1 {
-  width: 500px;
-  font-size: 40px;
-  margin-bottom: 40px;
   line-height: 1.2;
   text-transform: capitalize;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 768px) {
   .content .text h1 {
-    width: auto;
     font-size: 25px;
-    margin-bottom: 20px;
   }
 }
 
 .content .text p {
-  width: 500px;
-  margin-bottom: 40px;
   font-family: "Open Sans", sans-serif;
-}
-
-@media (max-width: 970px) {
-  .content .text p {
-    width: auto;
-    margin-bottom: 20px;
-  }
 }
 
 .content .text button {
@@ -109,8 +111,9 @@ body {
   transition: 0.3s;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 768px) {
   .content .text button {
+    align-self: center;
     padding: 13px 0;
   }
 }
@@ -126,7 +129,7 @@ body {
   gap: 15px;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 768px) {
   .footer {
     justify-content: center;
   }
